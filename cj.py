@@ -16,7 +16,7 @@ soup = BeautifulSoup(Response.text, 'html.parser')
 
 while True:
     info = soup.select('#content > div > table.tepTb02.tepDep02 > tbody > tr:nth-child(%d)' % i)
-    if not test:
+    if not info:
         break
     for tag in info:
         print(tag.get_text())
